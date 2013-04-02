@@ -1,0 +1,2 @@
+<h5>Links to JavaScript Standards (etc)</h5>
+http://www.ecma-international.org/publications/standards/Stnindex.htm

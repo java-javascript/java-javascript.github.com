@@ -1,0 +1,9 @@
+<h5>InfoQ Interview on Client Server Web App Development</h5>
+
+InfoQ has an interview with James Ward who spoke in the last year at JavaOne and OSCON on <a href="http://www.infoq.com/articles/client-server-application-development-with-html5-and-java">Client Server Application Development</a> with HTML5 and Java.  He accurately states the benefits of a client server model over traditional web development techniques:
+
+<p>
+<blockquote>
+Traditional web apps combine UI and data.  That works fine when you have only one type of client and the aggregation of UI and data should happen on the server.  In modern web and mobile apps there will likely be multiple clients consuming the same data.  RESTful services provide a simple way to use the HTTP protocol to map verbs and paths to a resource / data.  JSON is one way to serialize that data (turn it from objects in memory to something that can be transferred).  XML is another way to serialize data.  Most modern apps have chosen JSON because it is super simple and well supported by most technologies.  The combination of REST and JSON is simple and supports a wide variety of server and client technologies.
+</blockquote>
+</p>

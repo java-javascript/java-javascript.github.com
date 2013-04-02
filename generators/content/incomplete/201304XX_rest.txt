@@ -1,0 +1,7 @@
+<h5>How RESTful is your REST API?</h5>
+
+
+http://www.crummy.com/writing/speaking/2008-QCon/act3.html
+
+http://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+http://martinfowler.com/articles/richardsonMaturityModel.html
