@@ -2,7 +2,7 @@
 
 <p>
 Andrew Binstock over at <a href="http://www.drdobbs.com/architecture-and-design/the-quiet-revolution-in-programming/240152206">Dr. Dobb's</a>
-recently describe a "revolution" in programming - specifically a revolution that is requiring changes to the way programmers work.  
+recently described a "revolution" in programming - specifically a revolution that is requiring significant changes to the way programmers work.  
 Briefly stated, it is becoming much more common for programmers to work in multiple languages.
 </p>
 
@@ -20,7 +20,7 @@ In Java, the proliferation of JSR-223 scripting engines that are callable from w
 </blockquote>
 <br/>
 <p>
-This article confirms what has been stated elsewhere (and what I have experienced myself).  There is a growing need to be conversant
-in multiple programming languages, and there are tremendous opportunities for those who are willing to expand their skills to 
+This confirms what has been seeing elsewhere (and what I have experienced myself).  There is a growing need to be conversant
+in multiple programming languages and there are tremendous opportunities for those who are willing to expand their skills to 
 embrace additional languages.
 </p>
