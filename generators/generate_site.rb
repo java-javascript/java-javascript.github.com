@@ -24,7 +24,7 @@ end
 
 htmls = Dir.entries('..').grep(/.*.html/)
 idx = htmls.delete('index.html')
-about = htmls.delete('about.html')
+
 # index
 File.open("../#{idx}",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result} 
 
@@ -45,3 +45,12 @@ htmls.each{|html|
    @item=item
    File.open("../#{item[:date]}.html",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result}
 }
+
+about = htmls.delete('about.html')
+@item = {:tags=>'', 
+            :date=>"", 
+            :content=> '<p>Still deciding what this is about...</p>', 
+            :first_sentence => '' 
+            }
+File.open("../about.html",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result}
+ 

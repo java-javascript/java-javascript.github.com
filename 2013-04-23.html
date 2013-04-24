@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Client Server Web Applications</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/foundation.min.css" />  
+<style>
+body {line-height: 1.4;}
+pre {font-size: 12px; line-height: 1}
+</style>
+
+  <script src="js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+
+	<nav class="top-bar">
+	  <ul class="title-area">
+	    <li class="name">
+	      <h1><a href='/'>Client Server Web Applications</a></h1>
+	    </li>
+	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	  </ul>
+
+	  <section class="top-bar-section">
+	    <!-- Left Nav Section -->
+	    <ul class="left">
+	    </ul>
+
+	    <ul class="right">
+		  <li class="active"><a href="jvm.html">JVM</a></li>
+		  <li class="active"><a href="java.html">Java</a></li>
+	      <li class="divider"></li>
+	      <li><a href="javascript.html">JavaScript</a></li>
+      	  <li><a href="rest.html">REST</a></li>	
+	      <li class="divider hide-for-small"></li>
+	      <li><a href="about.html">About</a></li>
+	    </ul>
+	  </section>
+	</nav>
+
+
+	<div class="row">
+		<div class="large-2 columns">
+			<h4>2013-04-23</h4>
+		</div>
+		<div class="large-10 columns">
+			<div class="panel">
+				<p>
+				<h4>Quick JavaScript Debugging Tricks</h4>
+
+<p>Java developers generally do their work in a cycle of code, build (compile), execute.  
+
+The Java Virtual Machine included a HotSwap feature since 2002.  Later this functionality was added into 
+
+the Instrumentation API. This allows for limited update to class bytecode in place 
+
+(now commonly used in debuggers).  JRebel is a commercial third party product that allows for
+
+far more extensive reloading of java classes.</p>
+
+
+
+<p>Limitations on reloading code in this way simply don't exist in JavaScript.  Without going into the details of why this is possible,
+
+the following are a few examples of how code can quickly and easily be modified. This results in the possibility of
+
+ a very different workflow while working in JavaScript.  The fact that coding can be done in the browser console itself is significant.
+
+A cursory knowledge of JavaScript's capabilities and modern browsers means that JavaScript can be modified and debugged on almost any web page
+
+(even those in a production environments) which can allow for quick identification of problems and corresponding solutions.
+
+</p>
+
+
+
+<p>The following are a few simple techniques available in JavaScript that take advantage of its relatively
+
+	dynamic nature and allow you to extensively modify the behavior of any web page you like.
+
+</p>
+
+
+
+<h5>Add a Script to a Page</h5>
+
+<p>
+
+JavaScript <a href="http://en.wikipedia.org/wiki/Bookmarklet">bookmarklets</a> are a popular example of the ability to add JavaScript to a page.	 
+
+Some are fun (like <a href="http://fontbomb.ilex.ca/">fontbomb</a>) but they can also be used for development
+
+(for example the <a href="http://www.learningjquery.com/2006/12/jquerify-bookmarklet">jQuery bookmarklet</a>).  
+
+With a few lines of code in the browser console, you can include a publicly available JavaScript file into a page. <a href="https://developers.google.com/speed/libraries/devguide">Google</a> and others Content Delivery Networks host popular JavaScript libraries so there are plenty readily available. 
+
+
+
+</p>
+
+This example uses Native JavaScript to include jQuery in a page:
+
+<pre>
+
+	var script= document.createElement('script');
+
+	script.type= 'text/javascript';
+
+	script.src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+
+	document.head.appendChild(script);	
+
+</pre>
+
+<p>
+
+If jQuery is already available, you can use it and grab a script in a single function call:	 
+
+<pre>
+
+	$.getScript('http://underscorejs.org/underscore-min.js');	
+
+</pre>		
+
+</p>
+
+<p>
+
+If you ran both of these commands in a page that includes some list items (li tags), the following will
+
+show both in action - underscorejs's each() function and a jQuery selector.
+
+<pre>
+
+	_.each($('li'), function(li){console.log(li)});	
+
+</pre>		
+
+</p>
+
+
+
+<h5>Modify an existing page</h5>
+
+<p>
+
+To change an attribute of a DOM Element:
+
+	Navigate to <a href="http://oreilly.com/">http://oreilly.com/</a> and you can resize the logo like so:
+
+<pre>
+
+	$('.logo a img').width('400px');	
+
+</pre>	
+
+
+
+Similarly, you can change the value of a variable or text:
+
+<pre>
+
+	$('span.item').first().text('Really Popular Topics:');
+
+</pre>	
+
+
+
+There are even ways to override an <a href="http://www.bennadel.com/blog/1624-Ask-Ben-Overriding-Core-jQuery-Methods.htm">existing library's functions.</a>.
+
+</p>	
+
+
+
+<p>Modifying a JavaScript objects prototype allows allows you to change the behavior of existing objects.  If we start with an existing
+
+	function that modifies the argument passed to it (in this case, trimming leading whitespace).
+
+	
+
+<pre>
+
+	function ltrim(str)
+
+	{
+
+	  return str.replace(/^[ \t]+/, '');
+
+	}
+
+
+
+	var text = '    This is a Test!';  
+
+
+
+	ltrim(text)
+
+</pre>		
+
+
+
+Now modify the function so that it will use "this" - the containing object in this context (and remove the parameter).	Assign the
+
+function to the String prototype.  Now all JavaScript objects that have String as their prototype can have ltrim() called on them
+
+and will return the String with it's leading whitespace removed.  
+
+
+
+<pre>
+
+	function ltrim()
+
+	{
+
+	  return this.replace(/^[ \t]+/, '');
+
+	}
+
+
+
+	String.prototype.ltrim = ltrim;
+
+	
+
+	text.trim()	
+
+</pre>	
+
+
+
+</p>	
+
+
+
+<p>
+
+Some of the very characteristics that make JavaScript difficult (handling of scope, availability of globals) also make it
+
+rather easy to manipulate pages wherever they may be.  None of the techniques above are introduced because they are particularly valuable
+
+when coding a specific application.  They are extremely useful when debugging and troubleshooting pages in arbitrary 
+
+environments, and allow for quick iterations when experimenting with new code.
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</p>
+			</div>
+		</div>
+	</div>	
+
+
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <!--
+  <script src="js/foundation/foundation.js"></script>
+  <script src="js/foundation/foundation.alerts.js"></script>
+  <script src="js/foundation/foundation.clearing.js"></script>
+  <script src="js/foundation/foundation.cookie.js"></script>
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  <script src="js/foundation/foundation.forms.js"></script>
+  <script src="js/foundation/foundation.joyride.js"></script>
+  <script src="js/foundation/foundation.magellan.js"></script>
+  <script src="js/foundation/foundation.orbit.js"></script>
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  <script src="js/foundation/foundation.reveal.js"></script>
+  <script src="js/foundation/foundation.section.js"></script>
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  <script src="js/foundation/foundation.topbar.js"></script>
+  -->
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>

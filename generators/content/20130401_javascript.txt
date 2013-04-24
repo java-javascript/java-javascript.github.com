@@ -1,4 +1,4 @@
-<h5>Angular and IE7</h5>
+<h4>Angular and IE7</h4>
 
 AngularJS is a great framework but there is some ambiguity on their site related to support for old versions of IE.    For instance <a href="http://docs.angularjs.org/guide/ie">the docs</a> reference IE7 specifically and there is even even discussion in the comments related to IE6.  However, it seems that functionality is limited in versions lower than IE8.  Angular is being <a href="From http://docs.angularjs.org/misc/faq">tested with IE8 and above</a>:
 <br/><br/>
