@@ -59,7 +59,7 @@ htmls.each{|html|
 about = htmls.delete('about.html')
 @item = {:tags=>'', 
             :date=>"", 
-            :content=> '<p>Still deciding what this is about...</p>', 
+            :content=> '<p><a href="http://www.oreillynet.com/pub/au/5724">I</a> am still deciding what this is about...</p>', 
             :first_sentence => '' 
             }
 File.open("../about.html",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result}
