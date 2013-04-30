@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+  <channel>
+    <title>Client Server Web Application Development</title>
+    <link>http://www.clientserverweb.com</link>
+    <description>Client Server Web Architecture includes REST inspired APIs, 
+	significant JavaScript client side processing and Java 
+	or other server side language (many of which are available on the Java Virtual Machine).
+	</description><% @items.reverse.each do | item | %>
+  		<item>
+    		<title><%= item[:title] %></title>
+    		<link><%= "/#{item[:date]}.html" %></link>
+    		<description>
+				<%= item[:description] %>
+			</description>
+  		</item><% end %>  
+  </channel>
+</rss>

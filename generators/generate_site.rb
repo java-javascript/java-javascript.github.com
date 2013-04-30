@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'erb'
+require 'open-uri'
+
 site_template_list ="site_template.erb"
+rss_template ="rss_template.erb"
 @title=nil
 @items=[]
 @is_list=true
@@ -13,13 +16,18 @@ Dir.new('content').entries.grep(/.*.txt/).each do |note|
    content = File.open("content/#{note}").readlines.join("\n")
    tags.map{|m|m.gsub!('.txt','')}
    first_sentence = content.split('.  ')[0]
+   description = first_sentence.split('</h4>').last.gsub('<p>','').strip
    first_sentence += " <a href='#{dt}.html'>[...]</a>"
-   @items << {:tags=>tags, 
-              :date=>"#{dt}", 
-              :content=>content, 
-              :first_sentence => first_sentence
-              }
+   title = first_sentence.split('</h4>').first.gsub('<h4>','')
+
    
+   @items << {:tags => tags, 
+              :date => "#{dt}", 
+              :content => content, 
+              :first_sentence => first_sentence,
+              :title =>  title,
+              :description => description
+              }
 end
 
 htmls = Dir.entries('..').grep(/.*.html/)
@@ -27,6 +35,8 @@ idx = htmls.delete('index.html')
 
 # index
 File.open("../#{idx}",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result} 
+# rss
+File.open("../rss.xml",'w'){|f|f.puts ERB.new(File.read(rss_template)).result} 
 
 # tags page
 @all_items = @items
