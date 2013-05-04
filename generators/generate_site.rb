@@ -4,6 +4,8 @@ require 'open-uri'
 
 site_template_list ="site_template.erb"
 rss_template ="rss_template.erb"
+jquery = '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>' + "\n"
+jquery_github = '<script src="js/jquery.github.min.js"></script><script>$("[data-repo]").github();</script>' + "\n"
 @title=nil
 @items=[]
 @is_list=true
@@ -57,10 +59,25 @@ htmls.each{|html|
 }
 
 about = htmls.delete('about.html')
+about_content = <<-HERE
+<p><a href="http://www.oreillynet.com/pub/au/5724">I</a> am still deciding what this is about...</p>
+HERE
+
+projects =<<-HERE
+<h4>Selected Github Repos</h4>
+<div class="projects">
+  <div data-repo="java-javascript/client-server-web-apps"></div>
+  <div data-repo="ezgraphs/maven-jruby-gems-sinatra"></div>
+  <div data-repo="ezgraphs/underscore-mixins"></div>
+</div>
+HERE
+
+
 @item = {:tags=>'', 
             :date=>"", 
-            :content=> '<p><a href="http://www.oreillynet.com/pub/au/5724">I</a> am still deciding what this is about...</p>', 
+            :content=> about_content, 
             :first_sentence => '' 
-            }
-File.open("../about.html",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result}
+          }
+
+File.open("../about.html",'w'){|f|f.puts ERB.new(File.read(site_template_list).gsub('</body>',jquery + jquery_github + '</body>').gsub('<!-- REPO -->', projects)).result}
  

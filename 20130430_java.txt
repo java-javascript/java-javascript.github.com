@@ -1,0 +1,7 @@
+REST, WADL or Run?
+
+The tradition and background of a programmer tend to shape the perception and exceptions the individual has when viewing new or unfamiliar technologies.
+
+http://www.theserverside.com/tip/Effective-Naming-Strategies-for-RESTful-Web-Services
+
+http://stackoverflow.com/questions/1312087/what-is-the-reason-for-using-wadl
