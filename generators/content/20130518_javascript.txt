@@ -1,0 +1,52 @@
+<h4>Most Popular JavaScript MVC Frameworks</h4>
+
+<p>
+Your selection of a JavaScript MVC framework can be based on many factors (including specific framework functionality,
+in-house skills of your development team, and your experiences with previous projects).  It is also help to assess
+the popularity of a project.  Although "most-popular" does not necessarily mean "better", it provides insights into 
+wider developer and project adoption which can impact the long term
+viability of a framework, ramp-up time for future developers, and support and enhancements to the framework in the future.
+</p>	
+
+<p>Google Trends provides a general indication of the search traffic for terms related to a framework.  A graph can immediately
+	provide a rather vivid visual representation of relative popularity.</p>
+<script type="text/javascript" src="http://www.google.com/trends/embed.js?hl=en-US&q=angularjs,+knockoutjs,+backbonejs,+emberjs&date=5/2010+44m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330">	
+</script>
+
+<p>StackOverflow suggests the general supportability of a given framework based upon questions tagged.
+There are often numerous flags associated with a given framework, but a few examples of the current
+counts for representative tags provides a hint as to the developer community involved with each.	
+</p>
+
+
+<div class='stackoverflow-angularjs'></div><br/>
+<div class='stackoverflow-backbonejs'></div><br/>
+<div class='stackoverflow-knockoutjs'></div><br/>
+<div class='stackoverflow-emberjs'></div><br/>
+
+<p>Finally BuiltWith provides an indication of which technologies are actually in use.  According to BuiltWith.com at the time of this writing:</p>
+
+<a href='http://trends.builtwith.com/javascript/Angular-JS'>Angular</a>  4,134 websites (806 are among the most visited sites on the internet).
+<a href='http://trends.builtwith.com/javascript/Backbone.js'>Backbone</a> 3,405 websites (1,419 websites among the most visited). 
+<a href='http://trends.builtwith.com/javascript/KnockoutJS'>Knockout</a>  2,078 websites (1,154 websites among the most visited).
+<a href='http://trends.builtwith.com/javascript/Ember'>Ember</a> 188 websites (94 websites among the most visited). 
+
+
+<script type="text/javascript" charset="utf-8">
+	
+$(document).ready(function() {
+	$.getJSON('https://api.stackexchange.com/2.1/tags/angularjs/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+		$('.stackoverflow-angularjs').text('angularjs: ' + res.items[0].count)
+	});
+	$.getJSON('https://api.stackexchange.com/2.1/tags/backbone.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+		$('.stackoverflow-backbonejs').text('backbone.js: ' +res.items[0].count)
+	});
+	$.getJSON('https://api.stackexchange.com/2.1/tags/knockout.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+		$('.stackoverflow-knockoutjs').text('knockout.js: ' +res.items[0].count)
+	});
+	$.getJSON('https://api.stackexchange.com/2.1/tags/ember.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+		$('.stackoverflow-emberjs').text('ember.js: ' +res.items[0].count)
+	});		
+
+});
+</script>
