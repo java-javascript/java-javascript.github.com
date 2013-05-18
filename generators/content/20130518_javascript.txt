@@ -8,12 +8,15 @@ wider developer and project adoption which can impact the long term
 viability of a framework, ramp-up time for future developers, and support and enhancements to the framework in the future.
 </p>	
 
+<h5>Google Trends</h5>
 <p>Google Trends provides a general indication of the search traffic for terms related to a framework.  A graph can immediately
 	provide a rather vivid visual representation of relative popularity.</p>
 <div align='center'>	
 <script type="text/javascript" src="http://www.google.com/trends/embed.js?hl=en-US&q=angularjs,+knockoutjs,+backbonejs,+emberjs&date=5/2010+44m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330">	
 </script>
 </div>
+
+<h5>StackOverflow</h5>
 <p>StackOverflow suggests the general supportability of a given framework based upon questions tagged.
 There are often numerous flags associated with a given framework, but a few examples of the current
 counts for representative tags (retrieved via JavaScript as you hit the page) provides a hint as to 
@@ -27,6 +30,7 @@ the developer community involved with each.
 <li><a href='http://stackoverflow.com/tags/ember.js/info'>ember.js: </a>   <div style='display:inline;' class='stackoverflow-emberjs'></div> questions tagged.</li>
 </ul>
 
+<h5>BuiltWith</h5>
 <p>Finally BuiltWith.com provides an indication of which technologies are actually in use.  It has a paid API, but you can do lookups on their web
 	site for free.  At the time this was posted:</p>
 <ul>
