@@ -88,11 +88,13 @@ viability of a framework, ramp-up time for future developers, and support and en
 
 	provide a rather vivid visual representation of relative popularity.</p>
 
+<div align='center'>	
+
 <script type="text/javascript" src="http://www.google.com/trends/embed.js?hl=en-US&q=angularjs,+knockoutjs,+backbonejs,+emberjs&date=5/2010+44m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330">	
 
 </script>
 
-
+</div>
 
 <p>StackOverflow suggests the general supportability of a given framework based upon questions tagged.
 
@@ -118,17 +120,17 @@ counts for representative tags provides a hint as to the developer community inv
 
 <p>Finally BuiltWith provides an indication of which technologies are actually in use.  According to BuiltWith.com at the time of this writing:</p>
 
+<ul>
 
+<li><a href='http://trends.builtwith.com/javascript/Angular-JS'>Angular</a>  4,134 websites (806 are among the most visited sites on the internet).</li>
 
-<a href='http://trends.builtwith.com/javascript/Angular-JS'>Angular</a>  4,134 websites (806 are among the most visited sites on the internet).
+<li><a href='http://trends.builtwith.com/javascript/Backbone.js'>Backbone</a> 3,405 websites (1,419 websites among the most visited).</li> 
 
-<a href='http://trends.builtwith.com/javascript/Backbone.js'>Backbone</a> 3,405 websites (1,419 websites among the most visited). 
+<li><a href='http://trends.builtwith.com/javascript/KnockoutJS'>Knockout</a>  2,078 websites (1,154 websites among the most visited).</li>
 
-<a href='http://trends.builtwith.com/javascript/KnockoutJS'>Knockout</a>  2,078 websites (1,154 websites among the most visited).
+<li><a href='http://trends.builtwith.com/javascript/Ember'>Ember</a> 188 websites (94 websites among the most visited). </li>
 
-<a href='http://trends.builtwith.com/javascript/Ember'>Ember</a> 188 websites (94 websites among the most visited). 
-
-
+</ul>
 
 
 
@@ -140,25 +142,25 @@ $(document).ready(function() {
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/angularjs/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-angularjs').text('angularjs: ' + res.items[0].count)
+		$('.stackoverflow-angularjs').text('<b>angularjs:</b> ' + res.items[0].count)
 
 	});
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/backbone.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-backbonejs').text('backbone.js: ' +res.items[0].count)
+		$('.stackoverflow-backbonejs').text('<b>backbone.js:</b> ' +res.items[0].count)
 
 	});
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/knockout.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-knockoutjs').text('knockout.js: ' +res.items[0].count)
+		$('.stackoverflow-knockoutjs').text('<b>knockout.js:</b> ' +res.items[0].count)
 
 	});
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/ember.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-emberjs').text('ember.js: ' +res.items[0].count)
+		$('.stackoverflow-emberjs').text('<b>ember.js:</b> ' +res.items[0].count)
 
 	});		
 
