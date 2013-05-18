@@ -106,15 +106,17 @@ counts for representative tags provides a hint as to the developer community inv
 
 
 
+<ul>
 
+<li><b>angularjs:</b>  <div style='display:inline;' class='stackoverflow-angularjs'></div></li>
 
-<div class='stackoverflow-angularjs'></div><br/>
+<li><b>backbone.js:</b><div style='display:inline;' class='stackoverflow-backbonejs'></div></li>
 
-<div class='stackoverflow-backbonejs'></div><br/>
+<li><b>knockout.js:</b><div style='display:inline;' class='stackoverflow-knockoutjs'></div></li>
 
-<div class='stackoverflow-knockoutjs'></div><br/>
+<li><b>ember.js:</b>   <div style='display:inline;' class='stackoverflow-emberjs'></div></li>
 
-<div class='stackoverflow-emberjs'></div><br/>
+</ul>
 
 
 
@@ -142,25 +144,25 @@ $(document).ready(function() {
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/angularjs/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-angularjs').text('<b>angularjs:</b> ' + res.items[0].count)
+		$('.stackoverflow-angularjs').text(res.items[0].count)
 
 	});
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/backbone.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-backbonejs').text('<b>backbone.js:</b> ' +res.items[0].count)
+		$('.stackoverflow-backbonejs').text(res.items[0].count)
 
 	});
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/knockout.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-knockoutjs').text('<b>knockout.js:</b> ' +res.items[0].count)
+		$('.stackoverflow-knockoutjs').text(res.items[0].count)
 
 	});
 
 	$.getJSON('https://api.stackexchange.com/2.1/tags/ember.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
 
-		$('.stackoverflow-emberjs').text('<b>ember.js:</b> ' +res.items[0].count)
+		$('.stackoverflow-emberjs').text(res.items[0].count)
 
 	});		
 

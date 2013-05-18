@@ -19,11 +19,12 @@ There are often numerous flags associated with a given framework, but a few exam
 counts for representative tags provides a hint as to the developer community involved with each.	
 </p>
 
-
-<div class='stackoverflow-angularjs'></div><br/>
-<div class='stackoverflow-backbonejs'></div><br/>
-<div class='stackoverflow-knockoutjs'></div><br/>
-<div class='stackoverflow-emberjs'></div><br/>
+<ul>
+<li><b>angularjs:</b>  <div style='display:inline;' class='stackoverflow-angularjs'></div></li>
+<li><b>backbone.js:</b><div style='display:inline;' class='stackoverflow-backbonejs'></div></li>
+<li><b>knockout.js:</b><div style='display:inline;' class='stackoverflow-knockoutjs'></div></li>
+<li><b>ember.js:</b>   <div style='display:inline;' class='stackoverflow-emberjs'></div></li>
+</ul>
 
 <p>Finally BuiltWith provides an indication of which technologies are actually in use.  According to BuiltWith.com at the time of this writing:</p>
 <ul>
@@ -37,16 +38,16 @@ counts for representative tags provides a hint as to the developer community inv
 	
 $(document).ready(function() {
 	$.getJSON('https://api.stackexchange.com/2.1/tags/angularjs/info?order=desc&sort=popular&site=stackoverflow','',function(res){
-		$('.stackoverflow-angularjs').text('<b>angularjs:</b> ' + res.items[0].count)
+		$('.stackoverflow-angularjs').text(res.items[0].count)
 	});
 	$.getJSON('https://api.stackexchange.com/2.1/tags/backbone.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
-		$('.stackoverflow-backbonejs').text('<b>backbone.js:</b> ' +res.items[0].count)
+		$('.stackoverflow-backbonejs').text(res.items[0].count)
 	});
 	$.getJSON('https://api.stackexchange.com/2.1/tags/knockout.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
-		$('.stackoverflow-knockoutjs').text('<b>knockout.js:</b> ' +res.items[0].count)
+		$('.stackoverflow-knockoutjs').text(res.items[0].count)
 	});
 	$.getJSON('https://api.stackexchange.com/2.1/tags/ember.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
-		$('.stackoverflow-emberjs').text('<b>ember.js:</b> ' +res.items[0].count)
+		$('.stackoverflow-emberjs').text(res.items[0].count)
 	});		
 
 });
