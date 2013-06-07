@@ -8,6 +8,13 @@
 	or other server side language (many of which are available on the Java Virtual Machine).
 	</description>
   		<item>
+    		<title>JDK 7 for OSX: java.net.UnknownHostException</title>
+    		<link>/2013-06-07.html</link>
+    		<description>
+				TLDR: Add the name of your machine to /etc/hosts
+			</description>
+  		</item>
+  		<item>
     		<title>REST Inspired Pragmatic Web-API Design</title>
     		<link>/2013-06-06.html</link>
     		<description>
