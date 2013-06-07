@@ -18,6 +18,13 @@ a concern that has relatively broad consensus among API  developers currently.
 </p>
 
 <p>
+Securing Web APIs is another practical topic not addressed by REST directory.  James Ward
+presents a well articulated explanation of how to	
+<a href="http://www.jamesward.com/2013/05/13/securing-single-page-apps-and-rest-services">secure single page apps and REST services.</a> 
+In many cases, security is the determining factor on the viability of an API.  Security is a practical constraint that influences
+the adoption of an API to a much greater extent than other specified constraints that comprise REST.
+</p>
+<p>
 The definition of REST in its theoretical purity is immensely valuable.   But the long term vision driving REST constraints 
 introduces characteristics that are not flexible, easy to use, or easy to adopt.  The history of the web shows that real-world 
 practicality wins over theoretical purity in the web world.  REST ought to continue be recognized in its function as a standard-bearer
