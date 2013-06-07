@@ -13,8 +13,16 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <style>
 body {line-height: 1.4;}
-pre {font-size: 12px; line-height: 1}
 img {height: 25px;}
+pre {
+	font-size: 12px; 
+	line-height: 1
+	padding: 15px;
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
 </style>
 
   <script src="js/vendor/custom.modernizr.js"></script>
@@ -118,7 +126,7 @@ With a few lines of code in the browser console, you can include a publicly avai
 
 This example uses Native JavaScript to include jQuery in a page:
 
-<pre class='pre-scrollable'>
+<pre>
 
 	var script= document.createElement('script');
 
@@ -134,7 +142,7 @@ This example uses Native JavaScript to include jQuery in a page:
 
 If jQuery is already available, you can use it and grab a script in a single function call:	 
 
-<pre class='pre-scrollable'>
+<pre>
 
 	$.getScript('http://underscorejs.org/underscore-min.js');	
 
@@ -148,7 +156,7 @@ If you ran both of these commands in a page that includes some list items (li ta
 
 show both in action - underscorejs's each() function and a jQuery selector.
 
-<pre class='pre-scrollable'>
+<pre>
 
 	_.each($('li'), function(li){console.log(li)});	
 
@@ -166,7 +174,7 @@ To change an attribute of a DOM Element:
 
 	Navigate to <a href="http://oreilly.com/">http://oreilly.com/</a> and you can resize the logo like so:
 
-<pre class='pre-scrollable'>
+<pre>
 
 	$('.logo a img').width('400px');	
 
@@ -176,7 +184,7 @@ To change an attribute of a DOM Element:
 
 Similarly, you can change the value of a variable or text:
 
-<pre class='pre-scrollable'>
+<pre>
 
 	$('span.item').first().text('Really Popular Topics:');
 
@@ -196,7 +204,7 @@ There are even ways to override an <a href="http://www.bennadel.com/blog/1624-As
 
 	
 
-<pre class='pre-scrollable'>
+<pre>
 
 	function ltrim(str)
 
@@ -226,7 +234,7 @@ and will return the String with it's leading whitespace removed.
 
 
 
-<pre class='pre-scrollable'>
+<pre>
 
 	function ltrim()
 
