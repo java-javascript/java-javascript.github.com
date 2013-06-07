@@ -13,7 +13,7 @@
 		<tr><td>Java Full Version</td>	<td>1.7.0_21-b12</td></tr>
 	</table>	
 	An example of how this looked when I ran a new play app and hit the server in a browser
-<pre>
+<pre class='pre-scrollable'>
 [app] $ run
 
 --- (Running the application from SBT, auto-reloading is enabled) ---
@@ -34,7 +34,7 @@ This is a <a href='http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7180557'>b
 <a href='https://groups.google.com/forum/?fromgroups#!topic/h2-database/DuIlTLN5KOo'>workaround</a>
 for the moment is to add the name of your machine to your <b>/etc/hosts</b> file.	
 
-<pre>
+<pre class='pre-scrollable'>
 		127.0.0.1 		MyMacBookAir
 </pre>
 </p>	

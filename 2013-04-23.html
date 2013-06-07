@@ -118,7 +118,7 @@ With a few lines of code in the browser console, you can include a publicly avai
 
 This example uses Native JavaScript to include jQuery in a page:
 
-<pre>
+<pre class='pre-scrollable'>
 
 	var script= document.createElement('script');
 
@@ -134,7 +134,7 @@ This example uses Native JavaScript to include jQuery in a page:
 
 If jQuery is already available, you can use it and grab a script in a single function call:	 
 
-<pre>
+<pre class='pre-scrollable'>
 
 	$.getScript('http://underscorejs.org/underscore-min.js');	
 
@@ -148,7 +148,7 @@ If you ran both of these commands in a page that includes some list items (li ta
 
 show both in action - underscorejs's each() function and a jQuery selector.
 
-<pre>
+<pre class='pre-scrollable'>
 
 	_.each($('li'), function(li){console.log(li)});	
 
@@ -166,7 +166,7 @@ To change an attribute of a DOM Element:
 
 	Navigate to <a href="http://oreilly.com/">http://oreilly.com/</a> and you can resize the logo like so:
 
-<pre>
+<pre class='pre-scrollable'>
 
 	$('.logo a img').width('400px');	
 
@@ -176,7 +176,7 @@ To change an attribute of a DOM Element:
 
 Similarly, you can change the value of a variable or text:
 
-<pre>
+<pre class='pre-scrollable'>
 
 	$('span.item').first().text('Really Popular Topics:');
 
@@ -196,7 +196,7 @@ There are even ways to override an <a href="http://www.bennadel.com/blog/1624-As
 
 	
 
-<pre>
+<pre class='pre-scrollable'>
 
 	function ltrim(str)
 
@@ -226,7 +226,7 @@ and will return the String with it's leading whitespace removed.
 
 
 
-<pre>
+<pre class='pre-scrollable'>
 
 	function ltrim()
 
