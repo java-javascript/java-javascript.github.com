@@ -8,6 +8,17 @@
 	or other server side language (many of which are available on the Java Virtual Machine).
 	</description>
   		<item>
+    		<title>REST Inspired Pragmatic Web-API Design</title>
+    		<link>/2013-06-06.html</link>
+    		<description>
+				REST as defined by 
+
+<a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">Roy Fielding</a> 
+
+exerts a wide influence yet is seldom adopted <i>in toto</i>
+			</description>
+  		</item>
+  		<item>
     		<title>Most Popular JavaScript MVC Frameworks</title>
     		<link>/2013-05-18.html</link>
     		<description>

@@ -1,0 +1,26 @@
+<h4>REST Inspired Pragmatic Web-API Design</h4>
+
+<p>REST as defined by 
+<a href="http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">Roy Fielding</a> 
+exerts a wide influence yet is seldom adopted <i>in toto</i>.  
+In <a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">Best Practices for a Pragmatic RESTful API</a>
+Vinay Sahni summarizes factors that make an API flexible, easy to use, and easy to adopt.  His post differs from Fielding's relatively
+abstract, theoretical definition of constraints and includes factors like security, documentation, versioning, and JSON style.
+While he includes some discussion about linking (pagination) he explicitly cites HATEOAS as not quite ready for prime time, 
+a concern that has relatively broad consensus among API  developers currently.  
+</p>
+
+<p>HATEOAS is still a topic of active interest of course.  <a href="http://jsonapi.org/">JSON API</a> is a JSON-based 
+	read/write hypermedia-type designed to support a smart client who wishes build a data-store of information.
+	Like the &quot;Best Practices&quot; post above, it is obviously REST inspired, but is tempered by concerns introduced
+	by specific web application API design (the API is extracted from the JSON transport 
+	defined by <a href="http://emberjs.com/">Ember's</a> REST adapter.)  
+</p>
+
+<p>
+The definition of REST in its theoretical purity is immensely valuable.   But the long term vision driving REST constraints 
+introduces characteristics that are not flexible, easy to use, or easy to adopt.  The history of the web shows that real-world 
+practicality wins over theoretical purity in the web world.  REST ought to continue be recognized in its function as a standard-bearer
+but most projects will benefit with clear articulation of how to apply its principles effectively given current development 
+expectations.
+</p>
