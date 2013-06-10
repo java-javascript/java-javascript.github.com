@@ -6,7 +6,7 @@
   <meta name="description" content="Client Server Web Architecture includes REST inspired Web APIs, significant JavaScript client side processing and Java or other server side language (many of which are available on the Java Virtual Machine).">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width" />
-  <title>Client Server Web Application Development - webapis</title>
+  <title>Client Server Web Application Development - 2013-06-07</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/foundation.min.css" />  
   <link rel="stylesheet" href="js/assets/base.css">
@@ -94,97 +94,15 @@ div.java{color: purple;}
 	</nav>
 
 
+
+
+
 	<div class="row">
-		<div class="large-2 columns">
-			<h4>2013-06-07</h4>
-		</div>
-		<div class="large-10 columns">
-			<div class="panel">
-				<p>
-				<h4>JDK 7 for OSX: java.net.UnknownHostException</h4>
-
-<p>
-
-	TLDR: Add the name of your machine to /etc/hosts.  
-
-</p>
-
-<p>
-
-	When working on a <a href='http://www.playframework.com/'>play</a> app in JDK 7 on OSX using 
-
-	JDK 7: a java.net.UnknownHostException occurred  (nodename nor servname provided, or not known).
-
-	The specific versions involved.
-
-	<table>
-
-		<tr><th>Component</th>			<th>Version</th></tr>
-
-		<tr><td>OSX</td>				<td>10.7.5</td></tr>
-
-		<tr><td>Play</td>				<td>2.1.1</td></tr>
-
-		<tr><td>Java Full Version</td>	<td>1.7.0_21-b12</td></tr>
-
-	</table>	
-
-	An example of how this looked when I ran a new play app and hit the server in a browser
-
-<pre>
-
-[app] $ run
-
-
-
---- (Running the application from SBT, auto-reloading is enabled) ---
-
-
-
-22:26:54,124 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
-
-22:26:54,124 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
-
-22:26:54,124 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:file:/Users/cs/Desktop/play-2.1.1/repository/local/play/play_2.10/2.1.1/jars/play_2.10.jar!/logback.xml]
-
-22:26:54,138 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@162ccef8 - URL [jar:file:/Users/cs/Desktop/play-2.1.1/repository/local/play/play_2.10/2.1.1/jars/play_2.10.jar!/logback.xml] is not of type file
-
-22:26:54,165 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
-
-22:26:54,200 |-ERROR in ch.qos.logback.core.util.ContextUtil@57c80727 - Failed to get local hostname java.net.UnknownHostException: MyMacBookAir: MyMacBookAir: nodename nor servname provided, or not known
-
-	at java.net.UnknownHostException: MyMacBookAir: MyMacBookAir: nodename nor servname provided, or not known
-
-</pre>
-
+		<div class="large-12 columns">
+			<h2>2013-06-07</h2>
+		</div>	
+	</div>
 	
-
-</p>	
-
-
-
-<p>
-
-This is a <a href='http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=7180557'>bug</a> that has been reported, and the 
-
-<a href='https://groups.google.com/forum/?fromgroups#!topic/h2-database/DuIlTLN5KOo'>workaround</a>
-
-for the moment is to add the name of your machine to your <b>/etc/hosts</b> file.	
-
-
-
-<pre>
-
-		127.0.0.1 		MyMacBookAir
-
-</pre>
-
-</p>	
-
-				</p>
-			</div>
-		</div>
-	</div>	
 
 
 <div class="row">
