@@ -6,7 +6,7 @@
   <meta name="description" content="Client Server Web Architecture includes REST inspired Web APIs, significant JavaScript client side processing and Java or other server side language (many of which are available on the Java Virtual Machine).">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width" />
-  <title>Client Server Web Application Development - 2013-05-18</title>
+  <title>Client Server Web Application Development - webapis</title>
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/foundation.min.css" />  
   <link rel="stylesheet" href="js/assets/base.css">
@@ -27,13 +27,13 @@ pre  {
 }
 span.tag{
 	position:relative; 
-	left:-12px;
+	left:-10px;
 }
 div.box {
 	position:relative; 
 	width:90px;
 	height:20px;
-	top:-5px;
+	top:-10px;
 	-webkit-border-radius: 12px;
 	-moz-border-radius: 12px;
 	border-radius: 12px;
@@ -94,15 +94,140 @@ div.java{color: purple;}
 	</nav>
 
 
-
-
-
 	<div class="row">
-		<div class="large-12 columns">
-			<h2>2013-05-18</h2>
-		</div>	
-	</div>
+		<div class="large-2 columns">
+			<h4>2013-05-18</h4>
+			
+			<div class='box javascript'><span class='tag'>javascript</span></div>
+			
+		</div>
+		<div class="large-10 columns">
+			<div class="panel">
+				<p>
+				<h4>Most Popular JavaScript MVC Frameworks</h4>
+
+
+
+<p>
+
+Your selection of a JavaScript MVC framework can be based on many factors (including specific framework functionality,
+
+in-house skills of your development team, and your experiences with previous projects).  It is also help to assess
+
+the popularity of a project.  Although "most-popular" does not necessarily mean "better", it provides insights into 
+
+wider developer and project adoption which can impact the long term
+
+viability of a framework, ramp-up time for future developers, and support and enhancements to the framework in the future.
+
+</p>	
+
+
+
+<h5>Google Trends</h5>
+
+<p>Google Trends provides a general indication of the search traffic for terms related to a framework.  A graph can immediately
+
+	provide a rather vivid visual representation of relative popularity.</p>
+
+<div align='center'>	
+
+<script type="text/javascript" src="http://www.google.com/trends/embed.js?hl=en-US&q=angularjs,+knockoutjs,+backbonejs,+emberjs&date=5/2010+44m&cmpt=q&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330">	
+
+</script>
+
+</div>
+
+
+
+<h5>StackOverflow</h5>
+
+<p>StackOverflow suggests the general supportability of a given framework based upon questions tagged.
+
+There are often numerous flags associated with a given framework, but a few examples of the current
+
+counts for representative tags (retrieved via JavaScript as you hit the page) provides a hint as to 
+
+the developer community involved with each.	
+
+</p>
+
+
+
+<ul>
+
+<li><a href='http://stackoverflow.com/tags/angularjs/info'>angularjs: </a>  <div style='display:inline;' class='stackoverflow-angularjs'></div> questions tagged.</li>
+
+<li><a href='http://stackoverflow.com/tags/backbone.js/info'>backbone.js:</a>  <div style='display:inline;' class='stackoverflow-backbonejs'></div> questions tagged.</li>
+
+<li><a href='http://stackoverflow.com/tags/knockout.js/info'>knockout.js:</a>  <div style='display:inline;' class='stackoverflow-knockoutjs'></div> questions tagged.</li>
+
+<li><a href='http://stackoverflow.com/tags/ember.js/info'>ember.js: </a>   <div style='display:inline;' class='stackoverflow-emberjs'></div> questions tagged.</li>
+
+</ul>
+
+
+
+<h5>BuiltWith</h5>
+
+<p>Finally BuiltWith.com provides an indication of which technologies are actually in use.  It has a paid API, but you can do lookups on their web
+
+	site for free.  At the time this was posted:</p>
+
+<ul>
+
+<li><a href='http://trends.builtwith.com/javascript/Angular-JS'>Angular</a>  4,134 websites (806 are among the most visited sites on the internet).</li>
+
+<li><a href='http://trends.builtwith.com/javascript/Backbone.js'>Backbone</a> 3,405 websites (1,419 websites among the most visited).</li> 
+
+<li><a href='http://trends.builtwith.com/javascript/KnockoutJS'>Knockout</a>  2,078 websites (1,154 websites among the most visited).</li>
+
+<li><a href='http://trends.builtwith.com/javascript/Ember'>Ember</a> 188 websites (94 websites among the most visited). </li>
+
+</ul>
+
+
+
+<script type="text/javascript" charset="utf-8">
+
 	
+
+$(document).ready(function() {
+
+	$.getJSON('https://api.stackexchange.com/2.1/tags/angularjs/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+
+		$('.stackoverflow-angularjs').text(res.items[0].count)
+
+	});
+
+	$.getJSON('https://api.stackexchange.com/2.1/tags/backbone.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+
+		$('.stackoverflow-backbonejs').text(res.items[0].count)
+
+	});
+
+	$.getJSON('https://api.stackexchange.com/2.1/tags/knockout.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+
+		$('.stackoverflow-knockoutjs').text(res.items[0].count)
+
+	});
+
+	$.getJSON('https://api.stackexchange.com/2.1/tags/ember.js/info?order=desc&sort=popular&site=stackoverflow','',function(res){
+
+		$('.stackoverflow-emberjs').text(res.items[0].count)
+
+	});		
+
+
+
+});
+
+</script>
+
+				</p>
+			</div>
+		</div>
+	</div>	
 
 
 <div class="row">
