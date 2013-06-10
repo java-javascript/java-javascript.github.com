@@ -25,6 +25,33 @@ pre  {
 	word-wrap: break-word; /* IE */
 	overflow: auto;
 }
+span.tag{
+	position:relative; 
+	left:-12px;
+}
+div.box {
+	position:relative; 
+	width:90px;
+	height:20px;
+	top:-5px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	border:27px solid #FFFF00;
+	background-color:#F2AD0C;
+	-webkit-box-shadow: #B3B3B3 5px 5px 5px;
+	-moz-box-shadow: #B3B3B3 5px 5px 5px; 
+	box-shadow: #B3B3B3 5px 5px 5px;
+	-webkit-transform: rotate(20deg); 
+    -moz-transform: rotate(20deg);  
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /*for IE*/
+	-o-transform: rotate(20deg);}
+div.jvm {color:red;}
+div.webapis{color:blue;}
+div.javascript{color: green;}
+div.java{color: purple;}
+
+
 </style>
 
   <script src="js/vendor/custom.modernizr.js"></script>
@@ -80,6 +107,9 @@ pre  {
 
 		<div class="large-2 columns">
 			<h4>2013-06-07</h4>
+			
+			<div class='box jvm'><span class='tag'>jvm</span></div>
+			
 		</div>
 
 		<div class="large-10 columns">
