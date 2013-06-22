@@ -1,0 +1,13 @@
+<h4>Times are Changing</h4>
+<p>
+In light of the <a href="http://programming.oreilly.com/2013/05/looking-forward-a-leap.html#more-59765?cmp=tw-prog-art-looking-forward-a-leap">changing approaches to web development</a>
+a few themes and enlightening links.  	
+<ul>
+	<li><b>Front End Engineering as a Discipline</b>:  An extensive list of <a href='https://github.com/dypsilon/frontend-dev-bookmarks'>Front End Development Resources</a>.</li>
+	<li><b>JavaScript as an Application Target</b>: A <a href="http://kripken.github.io/mloc_emscripten_talk/#/">Slide Presentation by Alon Zakai</a> from Mozilla
+	on compiling to JavaScript.  Important considering the number of 
+	<a href="https://github.com/jashkenas/coffee-script/wiki/List-of-languages-that-compile-to-JS">
+	languages that compile to JavaScript</a> and the development of <a href="http://asmjs.org/">ASM.js</a>.</li>
+	<li><b>Shift towards Functional Programming</b>:  For instance the <a href="http://blog.fogus.me/2013/06/06/fun-js-just-a-sketch ">functional aspects of JavaScript</a>.</li>
+	<li><b>Responsive Design</b>:  to address the growing number of <a href="screensiz.es/">Mobile Device Screens.</a>  </a></li>
+</p>

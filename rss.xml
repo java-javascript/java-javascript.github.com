@@ -8,6 +8,15 @@
 	or other server side language (many of which are available on the Java Virtual Machine).
 	</description>
   		<item>
+    		<title>Times are Changing</title>
+    		<link>/2013-06-22.html</link>
+    		<description>
+				In light of the <a href="http://programming.oreilly.com/2013/05/looking-forward-a-leap.html#more-59765?cmp=tw-prog-art-looking-forward-a-leap">changing approaches to web development</a>
+
+a few themes and enlightening links
+			</description>
+  		</item>
+  		<item>
     		<title>JDK 7 for OSX: java.net.UnknownHostException</title>
     		<link>/2013-06-07.html</link>
     		<description>
