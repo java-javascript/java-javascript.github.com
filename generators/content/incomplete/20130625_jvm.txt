@@ -1,0 +1,34 @@
+http://stackoverflow.com/questions/2269164/create-deployable-jruby-jar-file
+http://stackoverflow.com/questions/14090243/packaging-jruby-gems-in-self-contained-jar
+https://github.com/jdblake/Sinatra-Warbler-Template
+http://rubygems.org/gems/warbler
+http://caldersphere.rubyforge.org/warbler/
+
+sudo if needed.
+Download and install http://jruby.org/download
+
+$ jruby --version
+jruby 1.7.4 (1.9.3p392) 2013-05-16 2390d3b on Java HotSpot(TM) 64-Bit Server VM 1.7.0_21-b12 [darwin-x86_64]
+
+$ jruby -S gem install sinatra
+
+
+Install warbler - https://github.com/jruby/warbler
+$ jruby -S gem install warble
+
+
+
+Verify installed gems
+$ jruby -S gem list --local
+
+
+$ gem install warbler
+$ mkdir bin
+$ cat <<EOF > bin/myapp
+#!/usr/bin/env jruby
+
+puts "Hello World"
+
+EOF
+$ chmod a+x bin/myapp
+$ warble jar
