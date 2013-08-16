@@ -1,3 +1,0 @@
-http://stackoverflow.com/questions/2269164/create-deployable-jruby-jar-file
-http://rubygems.org/gems/warbler
-
