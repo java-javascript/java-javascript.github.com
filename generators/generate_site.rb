@@ -79,5 +79,7 @@ HERE
             :first_sentence => '' 
           }
 
-File.open("../about.html",'w'){|f|f.puts ERB.new(File.read(site_template_list).gsub('</body>',jquery + jquery_github + '</body>').gsub('<!-- REPO -->', projects)).result}
+File.open("../about.html",'w'){|f|
+  f.puts ERB.new(File.read(site_template_list).gsub('</body>',jquery + jquery_github + '</body>').gsub('<!-- REPO -->', projects)).result
+}
  

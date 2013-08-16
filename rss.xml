@@ -8,6 +8,15 @@
 	or other server side language (many of which are available on the Java Virtual Machine).
 	</description>
   		<item>
+    		<title>Sieve of Eratosthenes</title>
+    		<link>/2013-08-15.html</link>
+    		<description>
+				<a href='http://clientserverweb.com/sieve-of-eratosthenes.html'>Here is an Angular implementation</a> of the
+
+<a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a>
+			</description>
+  		</item>
+  		<item>
     		<title>Times are Changing</title>
     		<link>/2013-06-22.html</link>
     		<description>

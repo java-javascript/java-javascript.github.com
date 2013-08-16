@@ -1,0 +1,11 @@
+<h4>Sieve of Eratosthenes</h4>
+
+<p><a href='http://clientserverweb.com/sieve-of-eratosthenes.html'>Here is an Angular implementation</a> of the
+<a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of Eratosthenes</a>.  The Sieve of Eratosthenes is an algorithm for finding prime numbers up to a given limit - in this example 100.  
+Implemented in less than 60 lines of JavaScript (using <a href='http://angularjs.org/'>AngularJS</a> and 
+<a href='http://underscorejs.org/'>UnderscoreJS</a>), CSS and HTML (all rudely and obtrusively included inline).  
+Shows off a simple angular application consisting of a module and single controller, 
+and the use of the ng-repeat, ng-style and ng-click directives.  
+With all of the implementations of the algorithm floating around, it is nice to use the power of 
+angular to provide a bit of visibility into how the algorithm works.
+</p>

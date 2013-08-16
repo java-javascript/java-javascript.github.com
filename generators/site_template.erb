@@ -127,6 +127,7 @@ div.java{color: purple;}
 	<div class="row">
 		<div class="large-2 columns">
 			<h4><%= @item[:date] %></h4>
+			<% @item[:tags]=[@item[:tags]] if @item[:tags].class.name=="String" %>
 			<% @item[:tags].each do |tag| %>
 			<div class='box <%= tag %>'><span class='tag'><%= tag%></span></div>
 			<% end %>
