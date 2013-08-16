@@ -34,6 +34,7 @@ end
 
 htmls = Dir.entries('..').grep(/.*.html/)
 idx = htmls.delete('index.html')
+htmls.delete('sieve-of-eratosthenes.html')
 
 # index
 File.open("../#{idx}",'w'){|f|f.puts ERB.new(File.read(site_template_list)).result} 
